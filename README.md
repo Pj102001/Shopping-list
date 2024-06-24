@@ -1,1 +1,1 @@
-# JavaScript-CrashCourse-Practice
+# This is a simple shopping List application
