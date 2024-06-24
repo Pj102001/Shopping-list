@@ -1,0 +1,7 @@
+Add items to list via form
+Remove items by clicking X
+clear all items by clicking clear btn 
+filter items by typing in filter field
+add LocalStorage to persist itemsclick on an item to put it inot edit mode and add to form 
+update item
+Deploy to Netlify
