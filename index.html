@@ -17,7 +17,11 @@
   <body>
     <div class="container">
       <header>
-        <img src="images/note.png" alt="" />
+        <img
+          class="Shopping-bag"
+          src="images/shoppingBag.png"
+          alt="shopping Bag"
+        />
         <h1>Shopping List</h1>
       </header>
       <form id="item-form">
@@ -34,6 +38,11 @@
           <button type="submit" class="btn">
             <i class="fa-solid fa-plus"></i> Add Item
           </button>
+        </div>
+
+        <div class="isEmptyList">
+          <img src="images/UpsetImage.gif" class="upsetImage" /> Uh Oh! Why is
+          your list Empty?
         </div>
       </form>
 
@@ -78,7 +87,7 @@
           </button>
         </li> -->
       </ul>
-      <div>
+      <div class="line">
         <hr class="lines" />
       </div>
       <button id="clear" class="btn-clear">Clear All</button>

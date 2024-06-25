@@ -4,6 +4,9 @@ const itemList = document.querySelector("#item-list");
 const clearBtn = document.querySelector("#clear");
 const itemFilter = document.querySelector("#filter");
 const formBtn = form.querySelector("button");
+const Body = document.querySelector("body");
+const isEmptyList = document.querySelector(".isEmptyList");
+const Line = document.querySelector(".line");
 let isEditMode = false;
 
 const displayItems = () => {
@@ -227,9 +230,13 @@ const ReSetUI = () => {
   if (items.length === 0) {
     clearBtn.style.display = "none";
     itemFilter.style.display = "none";
+    Line.style.display = "none";
+    isEmptyList.style.display = "block";
   } else {
     clearBtn.style.display = "flex";
     itemFilter.style.display = "flex";
+    isEmptyList.style.display = "none";
+    Line.style.display = "flex";
   }
 
   //  Once this function is called, we reset the Form Btn to add item, add the styles to it.
@@ -250,6 +257,11 @@ const filterItems = (e) => {
     } else item.style.display = "none";
   });
 };
+const footer = document.createElement("div");
+footer.innerHTML =
+  "<span  class = 'develop'>Developed By</span> Prabhjas Singh";
+footer.className = "Signage";
+Body.append(footer);
 
 //  t's a common practice to write a function named init that's called when a page loads or a component is created to perform initial setup tasks.
 const init = () => {

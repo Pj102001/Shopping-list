@@ -29,6 +29,40 @@ header h1 {
   color: #cecaca;
 }
 
+.Signage {
+  position: fixed; /* Fixes the position relative to the viewport */
+  bottom: 0px; /* Adjust this value to move the text up or down */
+  left: 0px; /* Adjust this value to move the text left or right */
+  color: rgb(159, 35, 56);
+  font-size: 14px; /* Optional: Adjust the font size as needed */
+  background-color: black; /* Optional: Match the background color */
+  padding: 5px;
+  margin-bottom: 0;
+}
+.develop {
+  color: #a2a2a2;
+}
+
+.isEmptyList {
+  color: white;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10%;
+  font-size: large;
+  font-style: bold;
+}
+
+.upsetImage {
+  height: 8em;
+  width: 8em;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.Shopping-bag {
+  height: 4em;
+  width: 4em;
+}
 .container {
   max-width: 500px;
   margin: 30px auto;
