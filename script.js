@@ -220,6 +220,10 @@ const clearAll = () => {
     localStorage.removeItem("items");
     //   invoking the ReSetUI,
     ReSetUI();
+    input.value = "";
+    input.style.backgroundColor = "white";
+    input.style.color = "black";
+    isEditMode = false;
   }
 };
 
@@ -243,6 +247,7 @@ const ReSetUI = () => {
   formBtn.innerHTML = '<i class = "fa-solid fa-pen"></i> add Item';
   formBtn.style.backgroundColor = "#333";
   formBtn.style.color = "white";
+  // isEditMode = false;
 };
 
 // Creating the filter function
