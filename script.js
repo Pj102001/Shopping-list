@@ -233,9 +233,11 @@ const ReSetUI = () => {
   if (items.length === 0) {
     clearBtn.style.display = "none";
     itemFilter.style.display = "none";
+    isEmptyList.style.display = "block";
   } else {
     clearBtn.style.display = "flex";
     itemFilter.style.display = "flex";
+    isEmptyList.style.display = "none";
   }
 
   //  Once this function is called, we reset the Form Btn to add item, add the styles to it.
