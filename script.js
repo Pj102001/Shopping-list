@@ -6,7 +6,6 @@ const itemFilter = document.querySelector("#filter");
 const formBtn = form.querySelector("button");
 const Body = document.querySelector("body");
 const isEmptyList = document.querySelector(".isEmptyList");
-const Line = document.querySelector(".line");
 let isEditMode = false;
 
 const displayItems = () => {
@@ -234,13 +233,9 @@ const ReSetUI = () => {
   if (items.length === 0) {
     clearBtn.style.display = "none";
     itemFilter.style.display = "none";
-    Line.style.display = "none";
-    isEmptyList.style.display = "block";
   } else {
     clearBtn.style.display = "flex";
     itemFilter.style.display = "flex";
-    isEmptyList.style.display = "none";
-    Line.style.display = "flex";
   }
 
   //  Once this function is called, we reset the Form Btn to add item, add the styles to it.
