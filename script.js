@@ -20,7 +20,7 @@ const displayItems = () => {
 const onAddItemSubmit = (e) => {
   e.preventDefault();
   // Declare newItem which is the input value
-  const newItem = input.value;
+  const newItem = input.value.trim();
   if (newItem === "") {
     alert("Please add Item");
     return;
@@ -31,7 +31,7 @@ const onAddItemSubmit = (e) => {
     const itemToEdit = itemList.querySelector(".edit-mode");
 
     //If it is in edit mode, we check if the item text and the new item are equal, if equal we move on
-    if (newItem != itemToEdit.textContent) {
+    if (newItem != itemToEdit.textContent.trim()) {
       if (checkIfItemExists(newItem)) {
         alert("This item already exists");
         return;
@@ -76,10 +76,10 @@ const onAddItemSubmit = (e) => {
 // check it item exsts
 const checkIfItemExists = (item) => {
   const itemsFromStorage = getItemsFromStorage();
-  const itemsFromStorageLowerCase = itemsFromStorage.map((i) => {
-    return i.toLowerCase();
+  const itemsFromStorageLowerCaseTrimmed = itemsFromStorage.map((i) => {
+    return i.toLowerCase().trim();
   });
-  return itemsFromStorageLowerCase.includes(item.toLowerCase());
+  return itemsFromStorageLowerCaseTrimmed.includes(item.toLowerCase().trim());
 };
 
 // Creating the function to add item to dom
@@ -115,7 +115,7 @@ const additemToStorage = (item) => {
   const itemsFromStorage = getItemsFromStorage();
 
   // add New Item to Array
-  itemsFromStorage.push(item);
+  itemsFromStorage.push(item.trim());
   // convert to Json String and set to local storage
   localStorage.setItem("items", JSON.stringify(itemsFromStorage));
 };
